@@ -4,6 +4,11 @@ public class  HanoiRhymer extends DefaultCountingOutRhymer {
 
     int totalRejected = 0;
 
+    public HanoiRhymer() {
+
+
+    }
+
     public int reportRejected() {
         return totalRejected;
     }
@@ -18,10 +23,6 @@ public class  HanoiRhymer extends DefaultCountingOutRhymer {
         }
         }
 
-        if (!callCheck() && in > peekaboo())
-            totalRejected++;
-        else
-            super.countIn(in);
-    }
+
 
 }
