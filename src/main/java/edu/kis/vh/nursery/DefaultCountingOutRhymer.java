@@ -1,5 +1,8 @@
 package edu.kis.vh.nursery;
 
+/**
+  klasa zapewnnia funkcjonalnosc stosu
+ */
 public class DefaultCountingOutRhymer {
 
     private static final int STACK_SIZE = 12;
@@ -13,7 +16,10 @@ public class DefaultCountingOutRhymer {
 
     public int getTotal() {
         return count;
-    }
+    }/**
+     * Metoda dodaje nową wartość do stosu, jeśli nie jest on pełny.
+     * @param in wartość do dodania
+     */
     public void countIn(int in) {
         if (!isFull())
             stack[++count] = in;

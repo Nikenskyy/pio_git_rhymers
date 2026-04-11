@@ -2,7 +2,7 @@ package edu.kis.vh.nursery;
 
 import org.junit.Assert;
 import org.junit.Test;
-
+// Projekt jest poprawny i stabilny po przeprowadzeniu hermetyzacji.
 public class RhymersJUnitTest {
 
     @Test
@@ -73,6 +73,14 @@ public class RhymersJUnitTest {
         Assert.assertEquals(testValue, result);
         result = rhymer.countOut();
         Assert.assertEquals(EMPTY_STACK_VALUE, result);
+    }
+
+    @Test
+    public void testHanoiRhymer() {
+        HanoiRhymer hanoi = new HanoiRhymer();
+        hanoi.countIn(10);
+        hanoi.countIn(15); // Powinno zostać odrzucone (15 > 10)
+        Assert.assertEquals(1, hanoi.reportRejected());
     }
 
 }
