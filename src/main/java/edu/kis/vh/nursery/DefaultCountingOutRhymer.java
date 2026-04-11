@@ -9,8 +9,11 @@ public class DefaultCountingOutRhymer {
 
     private final int[] stack = new int[STACK_SIZE];
 
-    public int count = EMPTY;
+    private int count = EMPTY;
 
+    public int getTotal() {
+        return count;
+    }
     public void countIn(int in) {
         if (!isFull())
             stack[++count] = in;
