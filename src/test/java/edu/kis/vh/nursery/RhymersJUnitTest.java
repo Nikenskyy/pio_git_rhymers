@@ -75,4 +75,12 @@ public class RhymersJUnitTest {
         Assert.assertEquals(EMPTY_STACK_VALUE, result);
     }
 
+    @Test
+    public void testHanoiRhymer() {
+        HanoiRhymer hanoi = new HanoiRhymer();
+        hanoi.countIn(10);
+        hanoi.countIn(15); // Powinno zostać odrzucone (15 > 10)
+        Assert.assertEquals(1, hanoi.reportRejected());
+    }
+
 }
